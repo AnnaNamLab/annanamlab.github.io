@@ -9,7 +9,7 @@
   --wide-width: 1500px;
   --page-pad: clamp(24px, 4vw, 64px);
   --publication-row-padding: 30px; /* Adjust publication item spacing here. */
-  --funding-row-padding: 100px; /* Adjust funding item spacing here. */
+  --funding-row-padding: 60px; /* Adjust funding item spacing here. */
   --heading-font: Georgia, "Times New Roman", serif;
   --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -286,13 +286,23 @@ main {
 
 .alumni-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 34px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 34px 28px;
+}
+
+.alumni-card {
+  max-width: 220px;
+  justify-self: center;
+}
+
+.alumni-card img {
+  width: min(170px, 100%);
+  margin: 0 auto;
 }
 
 .alumni-card h3 {
   margin-top: 18px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .publication-list {
@@ -350,7 +360,7 @@ main {
 }
 
 .funding-item img {
-  max-height: 170px;
+  max-height: 250px;
   width: min(520px, 100%);
   object-fit: contain;
 }
@@ -391,20 +401,43 @@ main {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 42%);
-  gap: clamp(34px, 6vw, 80px);
-  align-items: start;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.7fr);
+  gap: clamp(40px, 6vw, 86px);
+  align-items: center;
+}
+
+.contact-grid > div:first-child {
+  max-width: 790px;
+  padding-left: clamp(20px, 3vw, 36px);
+  border-left: 2px solid var(--link-blue);
 }
 
 .contact-grid h1 {
-  margin: 0 0 24px;
+  margin: 0 0 28px;
   font-family: var(--heading-font);
-  font-size: clamp(42px, 5vw, 64px);
+  font-size: clamp(48px, 5vw, 72px);
   font-weight: 500;
+  line-height: 1.05;
 }
 
 .contact-grid p {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
+  max-width: 760px;
+  font-size: clamp(18px, 1.7vw, 21px);
+  line-height: 1.55;
+}
+
+.contact-grid a {
+  color: var(--link-blue);
+}
+
+.contact-grid img {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: clamp(12px, 2vw, 20px);
+  border: 1px solid var(--rule);
+  background: #fff;
 }
 
 .site-footer {
@@ -460,7 +493,7 @@ main {
 
   .alumni-grid,
   .lab-photos {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .publication-item {
@@ -471,6 +504,11 @@ main {
   .funding-item {
     padding-top: 36px;
     padding-bottom: 36px;
+  }
+
+  .contact-grid > div:first-child {
+    padding-left: 0;
+    border-left: 0;
   }
 }
 
