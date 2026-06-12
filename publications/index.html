@@ -38,6 +38,66 @@
 <script crossorigin="anonymous" src="../_assets/common-f714ccbc67acb0a5-min.en-US-18c6cba78536.js" defer ></script><script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["../_assets/performance-f2ea2d4f97a34036-min.en-US-fdeab4c3cfa3.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-performance');</script>
 <script crossorigin="anonymous" src="../_assets/performance-f2ea2d4f97a34036-min.en-US-fdeab4c3cfa3.js" defer ></script><link rel="stylesheet" type="text/css" href="../_assets/website.components.imageFluid.styles-90fcd34ee89e.css"/><link rel="stylesheet" type="text/css" href="../_assets/website.components.html.styles-ebca907a0498.css"/><script defer src="../_assets/9882-3f261fdb0123.js"></script><script defer src="../_assets/website.components.imageFluid.visitor-d7b320fc9f06.js"></script><script defer src="../_assets/website.components.imageFluid.shared.constants-868d928d796a.js"></script><script defer src="../_assets/748-80a6d4d43e75.js"></script><script defer src="../_assets/image-effect-film-grain-8bbbf76d461b.js"></script><script defer src="../_assets/image-effect-refracted-lines-7f3ccce15509.js"></script><script defer src="../_assets/8018-255d20c7b4a9.js"></script><script defer src="../_assets/image-effect-liquid-15e5e3842093.js"></script><script defer src="../_assets/image-effect-refracted-circles-93296647725f.js"></script><script defer src="../_assets/website.components.html.visitor-26150fde2a00.js"></script><script defer src="../_assets/image-effect-parallax-23b992f167e9.js"></script><script type="application/ld+json">{"url":"../index.html","name":"ANNA NAM LAB","description":"","@context":"http://schema.org","@type":"WebSite"}</script><script type="application/ld+json">{"address":"","openingHours":"","@context":"http://schema.org","@type":"LocalBusiness"}</script><link rel="stylesheet" type="text/css" href="../_assets/site-d061f1951cb2.css"/><link rel="stylesheet" type="text/css" href="../_assets/static-3f8ab36bae8f.css"/><script>Static.COOKIE_BANNER_CAPABLE = true;</script>
 <!-- End of Squarespace Headers -->
+    <!-- GitHub Pages layout tune-up: preserve the original design while keeping publication rows compact and aligned. -->
+    <style>
+      @media (min-width: 768px) {
+        .publication-entry {
+          min-height: auto !important;
+        }
+
+        /* Controls the vertical spacing between publication items. */
+        .publication-entry .content-wrapper {
+          padding-top: 18px !important;
+          padding-bottom: 18px !important;
+        }
+
+        .publication-entry--classic .sqs-block {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+
+        /* Keeps the original image-left/text-right design, with every thumbnail using the same column width. */
+        .publication-entry--classic .sqs-layout > .row.sqs-row,
+        .publication-entry--classic .sqs-layout > .row.sqs-row > .col.sqs-col-12.span-12 > .row.sqs-row {
+          align-items: flex-start;
+          display: flex;
+        }
+
+        .publication-entry--classic .sqs-layout > .row.sqs-row > .col:not(.sqs-col-12):first-child,
+        .publication-entry--classic .sqs-layout > .row.sqs-row > .col.sqs-col-12.span-12 > .row.sqs-row > .col:first-child {
+          width: 37.5% !important;
+        }
+
+        .publication-entry--classic .sqs-layout > .row.sqs-row > .col:not(.sqs-col-12):first-child + .col,
+        .publication-entry--classic .sqs-layout > .row.sqs-row > .col.sqs-col-12.span-12 > .row.sqs-row > .col:first-child + .col {
+          width: 62.5% !important;
+        }
+
+        .publication-entry--classic .sqs-block-image-figure,
+        .publication-entry--classic .image-block-outer-wrapper {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+
+        .publication-entry--classic .design-layout-card {
+          --image-block-card-image-width: 100%;
+          display: block !important;
+        }
+
+        .publication-entry--classic .design-layout-card > div:first-child,
+        .publication-entry--classic img {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .publication-entry .content-wrapper {
+          padding-top: 20px !important;
+          padding-bottom: 20px !important;
+        }
+      }
+    </style>
     
     
   </head>
@@ -1482,6 +1542,7 @@
       
     
     
+    publication-entry publication-entry--featured
     '
   
   data-section-id="68e945ef6029d3591e6f9a11"
@@ -1972,6 +2033,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66c8e0ea19332049d89a26"
@@ -2288,6 +2350,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="66fb1037df02e0585bafd3bb"
@@ -2623,6 +2686,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="63f4e03edb1fd86bed38d648"
@@ -2935,6 +2999,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="6337531ae7e91626d7fdd489"
@@ -3265,6 +3330,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66cac4b20b9126798984cc"
@@ -3595,6 +3661,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66ccb78975d6731c4410f6"
@@ -3925,6 +3992,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66c6fdff16fc496c9bbbc0"
@@ -4255,6 +4323,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66ce31d45f307089a63ffe"
@@ -4585,6 +4654,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66cf08bd90701b224c9829"
@@ -4915,6 +4985,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66d08adc971b47105e8f8e"
@@ -5245,6 +5316,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66d151eb716a35bc2e56a7"
@@ -5575,6 +5647,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66d2780587154ff8743022"
@@ -5905,6 +5978,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66d364ef095d17b76c7060"
@@ -6235,6 +6309,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66d4d9b20b9126798a5710"
@@ -6565,6 +6640,7 @@
       
     
     
+    publication-entry publication-entry--classic
     '
   
   data-section-id="5f66d789885b214e6f2e8e36"
