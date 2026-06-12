@@ -2,8 +2,6 @@
 
 This repository contains the Anna Nam Lab website for GitHub Pages.
 
-The Anna Nam Lab studies blood stem cells, clonal hematopoiesis, and the molecular origins of blood cancers using single-cell and multi-omics approaches.
-
 ## Website Structure
 
 - `index.html` - homepage
