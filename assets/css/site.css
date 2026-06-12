@@ -26,6 +26,9 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--body-font);
   font-size: 17.6px;
   font-weight: 300;
@@ -93,6 +96,7 @@ img {
 }
 
 main {
+  flex: 1 0 auto;
   min-height: 65vh;
 }
 
@@ -441,6 +445,7 @@ main {
 }
 
 .site-footer {
+  flex-shrink: 0;
   background: #000;
   color: #fff;
   margin-top: 40px;
