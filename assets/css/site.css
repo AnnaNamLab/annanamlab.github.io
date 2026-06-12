@@ -1,0 +1,486 @@
+:root {
+  --ink: #000;
+  --paper: #fff;
+  --header-bg: #050505;
+  --link-blue: #2536a2;
+  --muted: #4c4c4c;
+  --rule: #dedede;
+  --max-width: 1180px;
+  --wide-width: 1500px;
+  --page-pad: clamp(24px, 4vw, 64px);
+  --publication-row-padding: 30px; /* Adjust publication item spacing here. */
+  --funding-row-padding: 100px; /* Adjust funding item spacing here. */
+  --heading-font: Georgia, "Times New Roman", serif;
+  --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 17.6px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--header-bg);
+  color: #fff;
+}
+
+.header-inner {
+  width: min(var(--wide-width), 100%);
+  margin: 0 auto;
+  padding: 28px var(--page-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px 20px;
+}
+
+.site-nav a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.site-nav a[aria-current="page"],
+.site-nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+main {
+  min-height: 65vh;
+}
+
+.page-section {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: clamp(44px, 6vw, 90px) var(--page-pad);
+}
+
+.page-section.wide {
+  width: min(var(--wide-width), 100%);
+}
+
+.page-title {
+  margin: 0 0 34px;
+  font-family: var(--heading-font);
+  font-size: clamp(36px, 4.2vw, 52px);
+  font-weight: 500;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.lede {
+  margin: 0 auto;
+  max-width: 980px;
+  font-family: var(--heading-font);
+  font-size: clamp(25px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.34;
+  text-align: center;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 1px solid currentColor;
+  color: #fff;
+  background: #000;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.button.secondary {
+  color: #000;
+  background: #fff;
+}
+
+.hero {
+  min-height: calc(100vh - 88px);
+  padding: clamp(96px, 14vw, 180px) var(--page-pad);
+  display: grid;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.hero-content {
+  position: relative;
+  width: min(820px, 100%);
+  margin-left: max(0px, calc((100vw - var(--wide-width)) / 2));
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.home-intro {
+  display: grid;
+  gap: 48px;
+}
+
+.home-intro h2 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: clamp(31px, 3.4vw, 44px);
+  font-weight: 500;
+  line-height: 1.33;
+}
+
+.home-intro p {
+  margin: 0;
+  max-width: 850px;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.42;
+}
+
+.split-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 38%) 1fr;
+  gap: clamp(34px, 6vw, 76px);
+  align-items: center;
+}
+
+.split-row + .split-row {
+  margin-top: 72px;
+}
+
+.split-row.reverse {
+  grid-template-columns: 1fr minmax(220px, 38%);
+}
+
+.split-row.reverse .split-image {
+  order: 2;
+}
+
+.split-text h2 {
+  margin: 0 0 18px;
+  font-family: var(--heading-font);
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.split-text p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.team-list {
+  display: grid;
+  gap: 48px;
+}
+
+.person-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+  gap: clamp(28px, 5vw, 58px);
+  align-items: start;
+}
+
+.person-row img,
+.alumni-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.person-row h2,
+.person-row h3,
+.alumni-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--heading-font);
+  font-size: clamp(25px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.person-row p,
+.alumni-card p {
+  margin: 0 0 10px;
+}
+
+.bio-notes {
+  margin-left: 28px;
+}
+
+.lab-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.lab-photos img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.alumni-card h3 {
+  margin-top: 18px;
+  font-size: 24px;
+}
+
+.publication-list {
+  width: min(var(--wide-width), 100%);
+  margin: 0 auto;
+  padding: 0 var(--page-pad) 72px;
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 37.5% 1fr;
+  gap: clamp(34px, 5vw, 66px);
+  align-items: start;
+  padding-top: var(--publication-row-padding);
+  padding-bottom: var(--publication-row-padding);
+}
+
+.publication-item img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.publication-item h2 {
+  margin: 0 0 28px;
+  font-family: var(--heading-font);
+  font-size: clamp(30px, 3.2vw, 48px);
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.publication-item h2 a {
+  color: var(--link-blue);
+}
+
+.publication-item p {
+  margin: 0 0 17px;
+  font-size: 18px;
+}
+
+.publication-item em {
+  font-style: italic;
+}
+
+.funding-list {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+}
+
+.funding-item {
+  padding-top: var(--funding-row-padding);
+  padding-bottom: var(--funding-row-padding);
+  display: flex;
+  justify-content: center;
+}
+
+.funding-item img {
+  max-height: 170px;
+  width: min(520px, 100%);
+  object-fit: contain;
+}
+
+.funding-note {
+  padding-top: 44px;
+  padding-bottom: 88px;
+  text-align: center;
+}
+
+.news-list {
+  display: grid;
+  gap: 38px;
+}
+
+.news-item {
+  border-top: 1px solid var(--rule);
+  padding-top: 28px;
+}
+
+.news-item h2 {
+  margin: 0 0 12px;
+  font-family: var(--heading-font);
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.news-item ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.news-item img {
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 42%);
+  gap: clamp(34px, 6vw, 80px);
+  align-items: start;
+}
+
+.contact-grid h1 {
+  margin: 0 0 24px;
+  font-family: var(--heading-font);
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 500;
+}
+
+.contact-grid p {
+  margin: 0 0 18px;
+}
+
+.site-footer {
+  background: #000;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  width: min(var(--wide-width), 100%);
+  margin: 0 auto;
+  padding: 52px var(--page-pad);
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.site-footer h2 {
+  margin: 0 0 10px;
+  font-family: var(--heading-font);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.site-footer p,
+.site-footer address {
+  margin: 0;
+  font-style: normal;
+}
+
+@media (max-width: 860px) {
+  .header-inner,
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .split-row,
+  .split-row.reverse,
+  .person-row,
+  .publication-item,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-row.reverse .split-image {
+    order: 0;
+  }
+
+  .alumni-grid,
+  .lab-photos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .publication-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .funding-item {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 16px;
+  }
+
+  .alumni-grid,
+  .lab-photos {
+    grid-template-columns: 1fr;
+  }
+}
