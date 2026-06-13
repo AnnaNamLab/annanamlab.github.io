@@ -332,7 +332,7 @@ main {
 .publication-item h2 {
   margin: 0 0 28px;
   font-family: var(--heading-font);
-  font-size: clamp(30px, 3.2vw, 48px);
+  font-size: clamp(24px, 2.5vw, 38px);
   font-weight: 500;
   line-height: 1.22;
 }
