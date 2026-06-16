@@ -68,10 +68,14 @@ img {
 
 .site-title {
   color: #fff;
-  font-size: 22px;
+  font-family: var(--heading-font);
+  font-size: clamp(28px, 4vw, 56px);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  font-style: normal;
+  letter-spacing: 0.19em;
+  line-height: 1.2;
   text-decoration: none;
+  text-transform: none;
   white-space: nowrap;
 }
 
