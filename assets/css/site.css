@@ -1,7 +1,8 @@
 :root {
   --ink: #000;
   --paper: #fff;
-  --header-bg: #050505;
+  --navy: #171b36;
+  --header-bg: var(--navy);
   --link-blue: #2536a2;
   --muted: #4c4c4c;
   --rule: #dedede;
@@ -10,7 +11,7 @@
   --page-pad: clamp(24px, 4vw, 64px);
   --publication-row-padding: 30px; /* Adjust publication item spacing here. */
   --funding-row-padding: 60px; /* Adjust funding item spacing here. */
-  --heading-font: Georgia, "Times New Roman", serif;
+  --heading-font: "ltc-bodoni-175", "Bodoni 72", Didot, "Bodoni MT", Georgia, "Times New Roman", serif;
   --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -141,7 +142,7 @@ main {
   padding: 13px 24px;
   border: 1px solid currentColor;
   color: #fff;
-  background: #000;
+  background: var(--navy);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -446,7 +447,7 @@ main {
 
 .site-footer {
   flex-shrink: 0;
-  background: #000;
+  background: var(--navy);
   color: #fff;
   margin-top: 40px;
 }
