@@ -10,7 +10,7 @@
   --wide-width: 1500px;
   --page-pad: clamp(24px, 4vw, 64px);
   --publication-row-padding: 30px; /* Adjust publication item spacing here. */
-  --funding-row-padding: 60px; /* Adjust funding item spacing here. */
+  --funding-row-padding: 38px; /* Adjust funding item spacing here. */
   --heading-font: "ltc-bodoni-175", "Bodoni 72", Didot, "Bodoni MT", Georgia, "Times New Roman", serif;
   --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -69,7 +69,7 @@ img {
 .site-title {
   color: #fff;
   font-family: var(--heading-font);
-  font-size: clamp(28px, 4vw, 56px);
+  font-size: clamp(28px, 4vw, 40px);
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.19em;
@@ -88,7 +88,7 @@ img {
 
 .site-nav a {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -362,16 +362,52 @@ main {
 }
 
 .funding-item {
+  --logo-width: 520px;
+  --logo-height: 150px;
+  width: 100%;
   padding-top: var(--funding-row-padding);
   padding-bottom: var(--funding-row-padding);
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 .funding-item img {
-  max-height: 250px;
-  width: min(520px, 100%);
+  width: 100%;
+  max-width: var(--logo-width);
+  height: var(--logo-height);
   object-fit: contain;
+  object-position: center;
+}
+
+.funding-item--hartwell {
+  --logo-width: 600px;
+  --logo-height: 100px;
+}
+
+.funding-item--dp5 {
+  --logo-width: 330px;
+  --logo-height: 300px;
+}
+
+.funding-item--burroughs {
+  --logo-width: 315px;
+  --logo-height: 165px;
+}
+
+.funding-item--starr {
+  --logo-width: 640px;
+  --logo-height: 116px;
+}
+
+.funding-item--nhlbi {
+  --logo-width: 500px;
+  --logo-height: 112px;
+}
+
+.funding-item--pew {
+  --logo-width: 400px;
+  --logo-height: 142px;
 }
 
 .funding-note {
@@ -514,6 +550,46 @@ main {
   .funding-item {
     padding-top: 36px;
     padding-bottom: 36px;
+  }
+
+  .funding-item img {
+    width: min(var(--logo-width), calc(100vw - 48px));
+    max-width: none;
+  }
+
+  .funding-item {
+    --logo-width: 450px;
+    --logo-height: 130px;
+  }
+
+  .funding-item--hartwell {
+    --logo-width: 500px;
+    --logo-height: 84px;
+  }
+
+  .funding-item--dp5 {
+    --logo-width: 275px;
+    --logo-height: 250px;
+  }
+
+  .funding-item--burroughs {
+    --logo-width: 285px;
+    --logo-height: 150px;
+  }
+
+  .funding-item--starr {
+    --logo-width: 540px;
+    --logo-height: 98px;
+  }
+
+  .funding-item--nhlbi {
+    --logo-width: 430px;
+    --logo-height: 96px;
+  }
+
+  .funding-item--pew {
+    --logo-width: 350px;
+    --logo-height: 124px;
   }
 
   .contact-grid > div:first-child {
