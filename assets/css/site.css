@@ -89,7 +89,7 @@ img {
 .site-nav a {
   color: #fff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
@@ -276,8 +276,9 @@ main {
   margin: 0 0 10px;
 }
 
-.bio-notes {
-  margin-left: 28px;
+.person-row .bio-notes {
+  margin: 14px 0 0 40px;
+  line-height: 1.35;
 }
 
 .lab-photos {
