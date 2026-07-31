@@ -283,15 +283,42 @@ main {
 
 .lab-photos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   margin-top: 64px;
+}
+
+.lab-photo {
+  margin: 0;
+}
+
+.lab-photo:first-child:nth-last-child(odd) {
+  grid-column: 1 / -1;
+  display: grid;
+  justify-items: center;
 }
 
 .lab-photos img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.lab-photo:first-child:nth-last-child(odd) img {
+  width: auto;
+  max-width: 100%;
+  max-height: min(68vh, 680px);
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.lab-photo figcaption {
+  margin-top: 12px;
+  font-family: var(--heading-font);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .alumni-grid {
@@ -554,6 +581,11 @@ main {
     order: 0;
   }
 
+  .person-row > img {
+    width: min(260px, 70vw);
+    justify-self: center;
+  }
+
   .alumni-grid,
   .lab-photos {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -600,6 +632,10 @@ main {
   .alumni-grid,
   .lab-photos {
     grid-template-columns: 1fr;
+  }
+
+  .lab-photo:first-child:nth-last-child(odd) {
+    grid-column: auto;
   }
 
   .funding-list {
