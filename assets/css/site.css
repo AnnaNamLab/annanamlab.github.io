@@ -362,6 +362,12 @@ main {
   object-fit: contain;
 }
 
+/* Optional: slightly smaller image for a single publication (add class to the img). */
+.publication-item img.publication-image-small {
+  width: 85%;
+  justify-self: center;
+}
+
 .publication-item h2 {
   margin: 0 0 28px;
   font-family: var(--heading-font);
