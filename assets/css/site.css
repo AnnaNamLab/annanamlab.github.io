@@ -358,14 +358,13 @@ main {
 }
 
 .publication-item img {
-  width: 100%;
+  width: 90%;
   object-fit: contain;
 }
 
-/* Optional: slightly smaller image for a single publication (add class to the img). */
-.publication-item img.publication-image-small {
-  width: 85%;
-  justify-self: center;
+/* Entries without an image span the full row. */
+.publication-item.no-image {
+  grid-template-columns: 1fr;
 }
 
 .publication-item h2 {
