@@ -404,8 +404,9 @@ main {
   grid-template-areas:
     "hartwell hartwell hartwell starr starr starr"
     "dp5 dp5 nhlbi nhlbi nhlbi nhlbi"
-    "burroughs burroughs burroughs pew pew pew";
-  grid-template-rows: 132px 214px 158px;
+    "burroughs burroughs burroughs pew pew pew"
+    "alsf alsf alsf alsf alsf alsf";
+  grid-template-rows: 132px 214px 158px 200px;
   gap: clamp(18px, 2vw, 24px);
 }
 
@@ -464,6 +465,12 @@ main {
   --logo-width: 430px;
   --logo-height: 150px;
   grid-area: pew;
+}
+
+.funding-item--alsf {
+  --logo-width: 200px;
+  --logo-height: 170px;
+  grid-area: alsf;
 }
 
 .funding-note {
@@ -620,7 +627,8 @@ main {
   .funding-item--burroughs,
   .funding-item--starr,
   .funding-item--nhlbi,
-  .funding-item--pew {
+  .funding-item--pew,
+  .funding-item--alsf {
     grid-column: auto;
     grid-row: auto;
     grid-area: auto;
